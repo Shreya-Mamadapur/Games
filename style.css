@@ -1,0 +1,132 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(background.webp);
+    background-size: 100%;   
+    display: flex;
+}
+
+.container{
+    display: inline;
+    flex: 1;
+    margin: 2%;
+    width: 30%;
+    padding: 1%;
+    background: rgba(238, 226, 226, 0.8);
+    border-radius: 2%;
+    /* box-shadow: 10px 10px 10px gray; */
+}
+
+.container:hover{
+    background: rgba(238, 226, 226, 0.9);
+    box-shadow: 10px 10px 10px gray;
+}
+
+header{
+    margin: 5%; margin-left: 0;
+}
+h1{
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1rem;
+}
+
+.main{
+    margin: 5%; margin-left: 0;
+}
+
+.main::after{
+    display: inline;
+}
+
+.oppChoise{
+    margin: 5% 0 5% 0;
+}
+
+.choise{
+    display: inline;
+    background-color: aliceblue;
+}
+
+button{
+    border: none;
+    border-radius: 10%;
+    background-color: #555;
+    color: white;
+    padding: 2.5%; 
+    margin: 1%;
+    font-size: large;
+    align-self: center;
+}
+button:hover{
+    background-color: palevioletred;
+}
+
+
+footer{
+    margin:0%;
+}
+
+#rules {
+    width: 100%;
+    background-color: #555;
+    color: white;
+    cursor: pointer;
+    border: none; padding: 2%;
+  }
+  
+  #rules:hover {
+    background-color: palevioletred;
+  }
+
+  #rulesimg{
+    display: none;
+  }
+
+  footer div{
+    display: flex;
+  }
+
+  footer div img{
+    flex: 2;
+    width: 10%;
+    padding-right: 5%;
+  }
+
+  footer div p{
+    flex: 2;
+  }
+  
+  .content {
+    padding: 2%;
+  }
+
+  @media only screen and (max-width: 1100px){
+  body{
+    flex-direction: column;
+  }
+  .container{
+    align-self: center;
+    width: 90%;
+  }
+ footer div{
+    flex-direction: column;
+ }
+ footer div img{
+    width:60%;
+    padding-right: 0%;
+    align-self: center;
+ }
+ 
+}
+

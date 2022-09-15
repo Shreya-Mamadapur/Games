@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="sheldon.png">
+</head>
+<body id="body">
+    <div class="container">
+        <header>
+        <h1>Rock Paper Scissors Lizard Spawk</h1>
+        </header>
+
+        <div class="main">
+            <div class="myChoise">
+                <h2>Choose:             
+                    <button id="Rock">Rock</button>
+                    <button id="Paper">Paper</button>
+                    <button id="Scissors">Scissors</button>
+                    <button id="Lizard">Lizard</button>
+                    <button id="Spawk">Spawk</button></h2>
+            </div>
+
+            <div class="oppChoise">
+                <h2>Opponent chose: <span id="choise">&nbsp&nbsp&nbsp&nbsp</span></h2>               
+            </div>
+
+            <h2 id="result">&nbsp</h2>
+        </div>
+        
+        <footer id="footer">
+            <h2 id="rules" onclick="rulesimg()" >Rules</h2>
+            <div>
+                <img src="rules.jpg" id="rulesimg" alt="image decribing the rules">
+            </div>
+            <div>
+                <img src="sheldon.png" id="sheldon" alt="sheldon in cartoon form">
+                <p class="content">As Sheldon explains, "Scissors cuts paper, paper covers rock, rock crushes lizard, lizard poisons Spock, Spock smashes scissors, scissors decapitates lizard, lizard eats paper, paper disproves Spock, Spock vaporizes rock, and as it always has, rock crushes scissors."</p>
+            </div>           
+        </footer>
+    </div>
+
+    <div class="container">
+        <header>
+        <h1>Dinner Spinner</h1>
+        </header>
+    </div>
+    <div class="container">
+        <header>
+        <h1>Game 3 coming up</h1>
+        </header>
+
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
