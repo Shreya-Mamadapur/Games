@@ -116,9 +116,13 @@ footer{
     padding: 2%;
   }
 /* second game */
+#spacing{
+  height: 500px;
+}
+
 #coin{
   position: relative;
-  top: 50%; left: 30%;
+  top: 50%; left: 35%;
   background-color: gray;
   border-radius: 50%; box-shadow: 5px 5px 0px 5px darkgray ;
   height: 150px; width: 150px;
