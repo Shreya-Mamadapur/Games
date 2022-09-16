@@ -1,4 +1,7 @@
-//////////////////////////////////Rock-Paper bla game/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////Rock-Paper bla game////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
 let myChoiseNum;
 let compChoiseNum;
 let result;
@@ -21,11 +24,11 @@ Spawk.addEventListener('click', () => {myChoiseNum = 4; changeColor(myChoiseNum)
 //background color on click (Shows user his selection)
 function changeColor(a){
     // let color[myChoiseNum] = {Rock.style.backgroundColor = "palevioletred", } 
-    if(a == 0){Rock.style.backgroundColor = "palevioletred";}
-    else if(a == 1){Paper.style.backgroundColor = "palevioletred";}
-    else if(a == 2){Scissors.style.backgroundColor = "palevioletred";}
-    else if(a == 3){Lizard.style.backgroundColor = "palevioletred";}
-    else if(a == 4){Spawk.style.backgroundColor = "palevioletred";}  
+    // if(a == 0){Rock.style.backgroundColor = "palevioletred";}
+    // else if(a == 1){Paper.style.backgroundColor = "palevioletred";}
+    // else if(a == 2){Scissors.style.backgroundColor = "palevioletred";}
+    // else if(a == 3){Lizard.style.backgroundColor = "palevioletred";}
+    // else if(a == 4){Spawk.style.backgroundColor = "palevioletred";}  
 }
 
 //exexcute game() whenever any button is clicked
@@ -67,4 +70,32 @@ function rulesimg(){
     }
     i++;
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////FLip a Coin////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+let coin = document.getElementById('coin');
+let emoji = document.getElementById('emoji');
+
+function flip(){
+    // coin.style.transform = "rotate3d(1, 0, 0, 920deg)";
+    let flipResult = Math.floor(Math.random()*2 + 1);
+    console.log(flipResult);
+
+    coin.classList.remove('animate');
+	setTimeout(function(){
+		coin.classList.add('animate');
+	}, 10); //10milliseconds
+
+    setTimeout(function(){
+         if(flipResult == 1){
+        emoji.innerText = "😀";
+        new Audio('Yay.mp3').play();
+        }
+        else{
+            emoji.innerText = "😔";
+        }
+        }, 2000);
+   
+
+}
