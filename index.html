@@ -9,8 +9,15 @@
     <link rel="icon" href="sheldon.png">
     </head>
 <body id="body">
+    <!-- <header class="mainHeader">
+        <a href="#game1">GAME-1</a>
+        <a href="#game2">GAME-2</a>
+        <a href="#game3">GAME-3</a>
+        <a href="#game4">GAME-4</a>
+        <a href="#game5">GAME-5</a>
+    </header> -->
 <div class="firstrow">
-    <div class="container">
+    <div class="container" id="game1">
         <header>
         <h1>Rock Paper Scissors Lizard Spawk</h1>
         </header>
@@ -44,7 +51,7 @@
         </footer>
     </div>
 
-    <div class="container">
+    <div class="container" id="game2">
         <header>
         <h1>Flip a coin</h1>
         </header>
@@ -57,29 +64,38 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <header>
-        <h1>Dinner Spinner</h1>
-        </header>
-
-    </div>
 </div>
 
 <div class="secondrow">
-    <div class="container">
+    <div class="container" id="game3">
         <header>
-        <h1>Game 4 coming up</h1>
-        </header>
-
-    </div>
-
-    <div class="container">
-        <header>
-        <h1>Game 5 coming up</h1>
-        </header>
+        <h1>Dinner Spinner</h1>
+        </header>        
+              
+        <div id="mainbox" class="mainbox">
+            <div id="box" class="box">
+                <div class="box1">
+                    <span class="span1"><b>Indian</b></span>
+                    <span class="span2"><b>Chinese</b></span>
+                    <span class="span3"><b>Pizza</b></span>
+                    <span class="span4"><b>Italian</b></span>
+                </div>
+                <div class="box2">
+                    <span class="span1"><b>Shawarma</b></span>
+                    <span class="span2"><b>Ethiopian</b></span>
+                    <span class="span3"><b>Junk</b></span>
+                    <span class="span4"><b>None</b></span>
+                </div>
+            </div>
+    
+            <button class="spin" onclick="spinfunction()">SPIN</button>
+        </div>
     </div>
 </div>
+
+
         <div class="copyright">
+            <div><b>View on Desktop for a bonus game</b></div>
             <p>© Copyright 2022 Shreya Mamadapur</p>
         </div>
     

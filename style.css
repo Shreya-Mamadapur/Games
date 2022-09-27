@@ -8,8 +8,30 @@
 body{
     background-image: url(background.webp);
 }
+/* .mainHeader{
+  display: flex;
+  justify-content: center;
+  margin: 0; 
+  position: fixed;
+  top: 0; left: 0; right: 0;
+
+}
+.mainHeader>a{
+  color: black;
+  background: rgba(238, 226, 226, 1);
+  padding: 1% 7% 1% 7%; margin: 0;
+  border: none;
+  margin: 0 auto;
+  font-weight: bold; 
+  word-wrap: normal;
+  text-decoration: none;
+} */
+
 .firstrow {
   display: flex;
+  margin-top: 2%;
+  align-items: center;
+  justify-content: center;
 }
 .secondrow{
   display: flex;
@@ -18,7 +40,7 @@ body{
 
 .container{
     margin: 2%;
-    width: 30%;
+    width: 50%;
     padding: 1%;
     background: rgba(238, 226, 226, 0.8);
     border-radius: 2%;
@@ -72,6 +94,7 @@ button{
     margin: 1%;
     font-size: medium;
     align-self: center;
+    cursor: pointer;
 }
 button:hover{
     background-color: palevioletred;
@@ -125,10 +148,10 @@ footer{
   top: 50%; left: 35%;
   background-color: gray;
   border-radius: 50%; box-shadow: 5px 5px 0px 5px darkgray ;
-  height: 150px; width: 150px;
+  height: 30%; width: 30%;
 }
 #coin p{
-  font-size: 50px;
+  font-size: 200%;
   text-align: center;
   position: relative;
   top: 20%;
@@ -143,6 +166,128 @@ footer{
   100% {transform: rotate3d(1, 0, 0, 1000deg);}
 }
 
+/* third game */
+
+.mainbox{
+  position: relative;
+  left: 15%;
+  width: 500px;
+  height: 500px;
+}
+.mainbox::after{
+  position: absolute;
+  content: '';
+  width: 32px;
+  height: 32px;
+  background: url('./Game3Imgs/arrow-left.png') no-repeat;
+  background-size: 32px;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.box{
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  overflow: hidden;
+  transition: 1s;
+}
+span{
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+  position: absolute;
+}
+.span1{
+  clip-path: polygon(0 92%, 100% 50%, 0 8%);
+  background-color: burlywood;
+  top: 120px;
+  left: 0;
+}
+.span2{
+  clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+  background-color: bisque;
+  top: 120px;
+  right: 0;
+}
+.span3{
+  clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+  background-color: blanchedalmond;
+  bottom: 0;
+  left: 120px;
+}
+.span4{
+  clip-path: polygon(50% 100%, 92% 0, 8% 0);
+  background-color: cornsilk;
+  top: 0;
+  left: 120px;
+}
+
+
+.box1 .span3 b{
+   transform: translate(-50%, -50%) rotate(-270deg);
+}
+.box1 .span1 b,
+.box2 .span1 b{
+  transform: translate(-50%, -50%) rotate(185deg);
+}
+.box2 .span3 b{
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+.box1 .span4 b,
+.box2 .span4 b{
+  transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+.box2{
+  width: 100%;
+  height: 100%;
+  transform: rotate(-135deg);
+}
+span b{
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.spin{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  background-color: gray;
+  color: #fff;
+  box-shadow: 0px 5px 20px #000;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: center;
+}
+.spin:active{
+  width: 70px;
+  height: 70px;
+  font-size: 20px;
+}
+
+.mainbox.animate:after{
+  animation: animateArrow 0.7s ease 3;
+}
+@keyframes animateArrow{
+  50%{
+    right: -80px;
+  }
+}
+
 
 
 
@@ -152,16 +297,42 @@ footer{
     position: relative;
     width: 100%;
     bottom: 0;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
     color: white;
   }
   .copyright p{
     text-align: center;
   }
 
+.copyright div{
+  color: white;
+  animation: scrolling 15s linear infinite;
+  font-size: large;
+  font-style: italic;
+  padding-bottom: 5%;
+  display: none;
+
+}
+@keyframes scrolling {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+
+
   @media only screen and (max-width: 1100px){
-  .firstrow ,.secondrow{
+  .firstrow{
     flex-direction: column;
+  }
+  .secondrow{
+    display: none;
+  }
+  .copyright div{
+    display: block;
   }
   .container{
     align-self: center;

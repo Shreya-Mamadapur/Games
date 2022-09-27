@@ -21,7 +21,7 @@ Scissors.addEventListener('click', () => {myChoiseNum = 2; changeColor(myChoiseN
 Lizard.addEventListener('click', () => {myChoiseNum = 3; changeColor(myChoiseNum);})
 Spawk.addEventListener('click', () => {myChoiseNum = 4; changeColor(myChoiseNum);})
 
-//background color on click (Shows user his selection)
+//background color on click (Shows user his selection) [This is not needed for mobile application]
 function changeColor(a){
     // let color[myChoiseNum] = {Rock.style.backgroundColor = "palevioletred", } 
     // if(a == 0){Rock.style.backgroundColor = "palevioletred";}
@@ -32,7 +32,7 @@ function changeColor(a){
 }
 
 //exexcute game() whenever any button is clicked
-let button = document.getElementsByTagName('button');
+let button = document.querySelectorAll('.myChoise button');
 for(i=0; i<button.length; i++){
 button[i].addEventListener('click', game);
 }
@@ -80,22 +80,40 @@ let emoji = document.getElementById('emoji');
 function flip(){
     // coin.style.transform = "rotate3d(1, 0, 0, 920deg)";
     let flipResult = Math.floor(Math.random()*2 + 1);
-    console.log(flipResult);
 
     coin.classList.remove('animate');
-	setTimeout(function(){
+	setTimeout(function(){ //adding only for 10ms 
 		coin.classList.add('animate');
 	}, 10); //10milliseconds
 
     setTimeout(function(){
-         if(flipResult == 1){
-        emoji.innerText = "😀";
+        if(flipResult == 1){
+        emoji.innerText = "😀 Won!";
         new Audio('Yay.mp3').play();
         }
         else{
-            emoji.innerText = "😔";
+            emoji.innerText = "😔 Lost";
         }
         }, 2000);
-   
+}
 
+/////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////Dinner Spinner////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
+
+function spinfunction(){
+
+
+	var x = 1024; //min value
+	var y = 9999; // max value
+
+	var deg = Math.floor(Math.random() * y) ;
+
+	document.getElementById('box').style.transform = "rotate("+deg+"deg)";
+
+	var element = document.getElementById('mainbox');
+	element.classList.remove('animate');
+	setTimeout(function(){
+		element.classList.add('animate');
+	}, 1000); //1000 = 1 second
 }
