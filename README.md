@@ -1,1 +1,1 @@
-[Click](https://shreya-mamadapur.github.io/SheldonRPS/) to view.
+[Click](https://shreya-mamadapur.github.io/Games/) to view.
