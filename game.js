@@ -64,7 +64,9 @@ function game() { //generates opp choise and check result
 
 //diaplying rules image only on click
 function rulesimg(){  
-    document.getElementById('rulesimg').style.display =  "block";  
+    document.getElementById('rulesimg').style.display =  "block"; 
+    document.getElementById('game1').style.height = "auto"; 
+    document.getElementById('game2').style.height = "auto";
     if(i%2 == 0){
         document.getElementById('rulesimg').style.display =  "none";
     }
